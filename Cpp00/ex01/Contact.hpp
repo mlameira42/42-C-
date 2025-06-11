@@ -11,17 +11,11 @@ class Contact {
 		
 		Contact(){}
 		~Contact(){}
-		int Foo(){
-			int i = -1;
-			while (name[++i])
-				;
-			return i;
-		}
-		void CreateContact(char *str, int len, int i) {index = i; name = new char + len + 1; name = str;}
-		char *GetName(){return name;}
+		void CreateContact(std::string str, int i) {index = i; name = new char + str.length() + 1; name.append(str);}
+		std::string GetName(){return name;}
 	private:
 		int index;
-		char *name;
+		std::string name;
 };
 class PhoneBook {
 	public:
