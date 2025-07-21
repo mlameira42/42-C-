@@ -1,10 +1,11 @@
-#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int main(void)
 {
 	PhoneBook book;
 	int index = 0;
 	std::string input = new char;
+	book.contact_num = 0;
 	while (1)
 	{
 		std::cin >> input;
@@ -13,11 +14,13 @@ int main(void)
 		if (!input.compare("ADD"))
 		{
 			std::cin >> input;
-			book.contacts[0].CreateContact(input, index);
-			std::cout << book.contacts[0].GetName() << std::endl;
+			book.addContact(input);
 		}
 		if (!input.compare("SEARCH"))
-			break;
+		{
+			std::cin >> input;
+			std::cout << book.searchContact(input) << std::endl;
+		}
 	}
 	std::cout << "Bye Bye" << std::endl;
 	return 0;
