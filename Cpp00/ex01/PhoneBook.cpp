@@ -6,13 +6,11 @@ PhoneBook::PhoneBook(){
 PhoneBook::~PhoneBook(){
 }
 void PhoneBook::addContact(std::string str){
-	std::getline(std::cin, str);
-	if (std::cin.eof() == true)
-		exit(0);
 	contacts[contact_num].CreateContact(str);
 	contact_num++;
 	if (contact_num == 8)
 		contact_num = 0;
+	std::cout << "Contact created\n";
 }
 
 std::string PhoneBook::searchContact(std::string str)

@@ -13,7 +13,7 @@ int main(void)
 			break;
 		if (!input.compare("ADD"))
 		{
-			std::cout << "Add name to contacts\n";
+			
 			book.addContact(input);
 		}
 		if (!input.compare("SEARCH"))
