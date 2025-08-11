@@ -1,27 +1,30 @@
 #include "PhoneBook.hpp"
 
-int main(void)
+PhoneBook::PhoneBook(){
+	this->contact_num = 0;
+}
+PhoneBook::~PhoneBook(){
+}
+void PhoneBook::addContact(std::string str){
+	std::getline(std::cin, str);
+	if (std::cin.eof() == true)
+		exit(0);
+	contacts[contact_num].CreateContact(str);
+	contact_num++;
+	if (contact_num == 8)
+		contact_num = 0;
+}
+
+std::string PhoneBook::searchContact(std::string str)
 {
-	PhoneBook book;
-	int index = 0;
-	std::string input = new char;
-	book.contact_num = 0;
-	while (1)
-	{
-		std::cin >> input;
-		if (!input.compare("EXIT"))
-			break;
-		if (!input.compare("ADD"))
-		{
-			std::cin >> input;
-			book.addContact(input);
-		}
-		if (!input.compare("SEARCH"))
-		{
-			std::cin >> input;
-			std::cout << book.searchContact(input) << std::endl;
-		}
-	}
-	std::cout << "Bye Bye" << std::endl;
-	return 0;
+	int i = 0;
+
+	std::getline(std::cin, str);
+	if (std::cin.eof() == true)
+		return 0;
+	while (i < 8 && str.compare(this->contacts[i].GetName()))
+			i++;
+	if (i != 8)
+		return this->contacts[i].GetName();
+	return "No name found";
 }

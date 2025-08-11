@@ -1,24 +1,15 @@
-#ifndef	PHONEBOOK_HPP
-#define	PHONEBOOK_HPP
+#pragma once
 
-#include <iostream>
 #include "Contact.hpp"
 
 class PhoneBook {
-	Contact contacts[8];
+	private:
+		Contact contacts[8];
 	public:
 		int	contact_num;
-		PhoneBook(){
-			std::cout << "abc" << std::endl;
-		}
-		~PhoneBook(){
-			std::cout << "def" << std::endl;
-		}
-		void addContact(std::string str){
-			contacts[contact_num].CreateContact(str);
-			contact_num++;
-		}
-		std::string searchContact(std::string){}
+		PhoneBook();
+		~PhoneBook();
+		void addContact(std::string str);
+		int readinput(std::string *input);
+		std::string searchContact(std::string str);
 };
-
-#endif

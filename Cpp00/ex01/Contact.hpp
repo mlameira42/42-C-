@@ -1,22 +1,15 @@
 
-#ifndef	CONTACT_HPP
-#define	CONTACT_HPP
-
+#pragma once
 #include <iostream>
-
-
+#include <stdlib.h>
 
 class Contact {
-	public:	
+	private:
 		std::string name;
-		Contact(){}
-		~Contact(){}
-		void CreateContact(std::string str) 
-			{
-				this->name = str;
-			}
-		std::string GetName(){return name;}
+	public:	
+		Contact();
+		~Contact();
+		void CreateContact(std::string str);
+		std::string GetName();
 	
 };
-
-#endif
