@@ -13,13 +13,12 @@ int main(void)
 			break;
 		if (!input.compare("ADD"))
 		{
-			
 			book.addContact(input);
 		}
 		if (!input.compare("SEARCH"))
 		{
 			//TODO: Display a list of contacts
-			std::cout << book.searchContact(input) << "\n";
+			book.searchContact();
 		}
 	}
 	std::cout << "Exiting.\n";

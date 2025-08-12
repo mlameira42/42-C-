@@ -1,19 +1,18 @@
 
 #pragma once
 #include <iostream>
-#include <stdlib.h>
+#include <iomanip>
+#include <string>
+#include <cstdlib>
 
 class Contact {
 	private:
-		std::string fname;
-		std::string lname;
-		std::string nname;
-		std::string number;
-		std::string secret;
+		std::string contact[5];
 	public:	
 		Contact();
 		~Contact();
-		void CreateContact(std::string str);
-		std::string GetName();
+		std::string inputread(std::string str);
+		int CreateContact(std::string str);
+		void GetCont(int index);
 	
 };
