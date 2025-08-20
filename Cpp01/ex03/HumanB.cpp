@@ -1,13 +1,20 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string str){
+HumanB::HumanB(std::string str) : weapon(NULL){
 	name = str;
+	std::cout << name << " Constructor created\n";
+}
+
+HumanB::~HumanB(){
+	std::cout << name << " Destructed itself\n";
 }
 
 void HumanB::attack(){
-	std::cout << name << " attacks with their " << weapon.getType() << "\n";
+	if (!weapon)
+		return (void)(std::cout << name << " Tried to attack, but failed\n");
+	std::cout << name << " attacks with their " << (*weapon).getType() << "\n";
 }
 
-void HumanB::setWeapon(Weapon wp){
-	weapon = wp;
+void HumanB::setWeapon(Weapon &wp){
+	weapon = &wp;
 }
