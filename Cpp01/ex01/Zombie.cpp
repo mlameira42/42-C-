@@ -1,8 +1,12 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(){}
+Zombie::Zombie(){
+	std::cout << "Zombie constructor created\n";
+}
 
-Zombie::~Zombie(){}
+Zombie::~Zombie(){
+	std::cout <<"Zombie destructed itself\n";
+}
 
 void Zombie::announce(){
 	std::cout << _name << ": BraiiiiiiinnnzzzZ...\n";

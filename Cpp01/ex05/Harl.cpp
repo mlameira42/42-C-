@@ -1,6 +1,8 @@
 #include "Harl.hpp"
 
-Harl::Harl(){}
+Harl::Harl(){
+	std::cout << "Harl constructor created\n";
+}
 
 Harl::~Harl(){}
 
