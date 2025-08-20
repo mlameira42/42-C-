@@ -1,4 +1,4 @@
-SRC = main.cpp  Harl.cpp
+SRC = main.cpp  Fixed.cpp
 
 OBJ = $(SRC:.cpp=.opp)
 
@@ -6,7 +6,7 @@ COMP = c++
 
 FLGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = Harl
+NAME = Fixed
 
 %.opp : %.cpp
 	$(COMP) $(FLGS) -c $< -o $@

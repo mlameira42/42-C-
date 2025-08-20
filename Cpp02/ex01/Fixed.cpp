@@ -16,10 +16,12 @@ Fixed::Fixed(const Fixed &copy) {
 }
 
 Fixed::Fixed(const int conv){
+	std::cout << "Int constructor called\n";
 	this->setRawBits(conv << this->bytewidth);
 }
 
 Fixed::Fixed(const float conv){
+	std::cout << "Float constructor called\n";
 	this->setRawBits(round(conv * (1 << this->bytewidth)));
 }
 
@@ -30,14 +32,15 @@ Fixed &Fixed::operator=(const Fixed &src){
 		this->binary_point = src.binary_point;
 	return *this;
 }
-
+std::ostream &operator<<(std::ostream &o, const Fixed &src){
+	o << src.toFloat();
+	return o;
+}
 int Fixed::getRawBits( void ){
-	std::cout << "getRawBits member function called\n";
 	return this->binary_point;
 }
 
 void Fixed::setRawBits( int const toset ){
-	std::cout << "setRawBits member function called\n";
 	this->binary_point = toset;
 }
 

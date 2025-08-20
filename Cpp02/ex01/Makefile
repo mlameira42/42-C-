@@ -6,7 +6,7 @@ COMP = c++
 
 FLGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = Harl
+NAME = Fixed
 
 %.opp : %.cpp
 	$(COMP) $(FLGS) -c $< -o $@
