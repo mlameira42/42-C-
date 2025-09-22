@@ -6,7 +6,7 @@
 /*   By: mlameira <mlameira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 09:56:06 by tblaase           #+#    #+#             */
-/*   Updated: 2025/08/16 13:15:36 by mlameira         ###   ########.fr       */
+/*   Updated: 2025/09/03 07:31:45 by mlameira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,13 @@ int main(int argc, char **argv)
 		if (outfile.is_open() == false)
 		{
 			std::perror("Outfile Error");
+			infile.close();
+			return (EXIT_FAILURE);
+		}
+		if (!search.compare("") || !replace.compare(""))
+		{
+			std::cout << "Empty argument error handler\n";
+			outfile.close();
 			infile.close();
 			return (EXIT_FAILURE);
 		}

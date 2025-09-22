@@ -31,15 +31,15 @@ ClapTrap::~ClapTrap(){
 
 void ClapTrap::attack(const std::string& target){
 	if (this->hitpts <= 0)
-		return (void)(std::cout << "ClapTrap " << this->_name 
-			<< " is dead and cant attack " << target << "!\n");
+		return (void)(std::cout << this->_name << " is dead and cant attack " << 
+		target << "!\n");
 	if (this->energypts <= 0)
-		return (void)(std::cout << "ClapTrap " << this->_name 
-			<< " has no energy therefore, can't attack "<< target << "!\n");
+		return (void)(std::cout << this->_name << " has no energy therefore, can't attack "<<
+		target << "!\n");
+	this->energypts--;
 	std::cout << "ClapTrap " << this->_name << " attacks " <<
 	target << " causing " << this->attackdmg << " points of damage!\n";
 }
-
 void ClapTrap::takeDamage(unsigned int amount){
 	if (this->hitpts <= amount)
 	{

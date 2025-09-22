@@ -1,15 +1,12 @@
 SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
-OBJ = $(SRC:.cpp=.opp)
+OBJ = $(SRC:.cpp=.o)
 
 COMP = c++
 
 FLGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = log
-
-%.opp : %.cpp
-	$(COMP) $(FLGS) -c $< -o $@
 
 all : $(NAME)
 

@@ -1,15 +1,12 @@
-SRC = Fixed.cpp main.cpp
+SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 
-OBJ = $(SRC:.cpp=.opp)
+OBJ = $(SRC:.cpp=.o)
 
 COMP = c++
 
 FLGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = OCF
-
-%.opp : %.cpp
-	$(COMP) $(FLGS) -c $< -o $@
+NAME = FragTrap
 
 all : $(NAME)
 

@@ -7,7 +7,7 @@ Zombie::Zombie(std::string zombieN){
 }
 
 Zombie::~Zombie(){
-	std::cout << this->name << "Delete itself from existence\n";
+	std::cout << this->name << " Deleted itself from existence\n";
 }
 
 
