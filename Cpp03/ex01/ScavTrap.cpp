@@ -17,6 +17,17 @@ ScavTrap::ScavTrap(const ClapTrap &cpy) : ClapTrap(cpy){
 	std::cout << "ScavTrap copy called\n";
 }
 
+ScavTrap &ScavTrap::operator=(const ScavTrap &op){
+	if (this != &op)
+	{
+		this->_name = op._name;
+		this->attackdmg = op.attackdmg;
+		this->energypts = op.energypts;
+		this->hitpts = op.hitpts;
+	}
+	return *this;
+}
+
 ScavTrap::~ScavTrap(){
 	std::cout << "ScavTrap destuctor called\n";
 }

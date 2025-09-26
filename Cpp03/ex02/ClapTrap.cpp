@@ -10,6 +10,7 @@ ClapTrap::ClapTrap(std::string name):hitpts(10), energypts(10), attackdmg(0){
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &op){
+	std::cout << "ClapTrap assigning operation called\n";
 	if (this != &op)
 	{
 		this->_name = op._name;

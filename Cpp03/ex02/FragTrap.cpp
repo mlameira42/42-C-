@@ -17,6 +17,18 @@ FragTrap::FragTrap(const ClapTrap &cpy) : ClapTrap(cpy){
 	std::cout << "FragTrap copy called\n";
 }
 
+FragTrap &FragTrap::operator=(const FragTrap &op){
+	std::cout << "FragTrap assigning operation called\n";
+	if (this != &op)
+	{
+		this->_name = op._name;
+		this->attackdmg = op.attackdmg;
+		this->energypts = op.energypts;
+		this->hitpts = op.hitpts;
+	}
+	return *this;
+}
+
 FragTrap::~FragTrap(){
 	std::cout << "FragTrap destuctor called\n";
 }
