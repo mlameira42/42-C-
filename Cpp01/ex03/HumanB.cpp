@@ -11,7 +11,7 @@ HumanB::~HumanB(){
 
 void HumanB::attack(){
 	if (!weapon)
-		return (void)(std::cout << name << " Tried to attack, but failed\n");
+		return (void)(std::cout << name << " tried to attack with nothing and it failed\n");
 	std::cout << name << " attacks with their " << (*weapon).getType() << "\n";
 }
 
