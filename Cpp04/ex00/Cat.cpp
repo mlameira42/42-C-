@@ -6,11 +6,6 @@ Cat::Cat() : Animal(){
 	std::cout << "Cat default constructor called!\n"; 
 }
 
-Cat::Cat(std::string _name): Animal() {
-	this->type = "Cat";
-	std::cout << "Cat constructor with parameters called!\n"; 
-}
-
 Cat::Cat(const Cat &cpy) : Animal(){
 	std::cout << "Cat copy constructor called!\n";
 	*this = cpy;

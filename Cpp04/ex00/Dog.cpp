@@ -6,11 +6,6 @@ Dog::Dog() : Animal(){
 	std::cout << "Dog default constructor called!\n"; 
 }
 
-Dog::Dog(std::string _name): Animal(), name(_name) {
-	this->type = "Dog";
-	std::cout << "Dog constructor with parameters called!\n"; 
-}
-
 Dog::Dog(const Dog &cpy):Animal(){
 	std::cout << "Dog copy constructor called!\n";
 	*this = cpy;

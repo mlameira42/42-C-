@@ -1,12 +1,11 @@
-SRC = ClapTrap.cpp main.cpp ScavTrap.cpp
-
+SRC = Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp main.cpp Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 
 COMP = c++
 
 FLGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = ScavTrap
+NAME = polymorphism
 
 all : $(NAME)
 
